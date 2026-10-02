@@ -4,12 +4,14 @@ import api.payload.User;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+import java.util.List;
+
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 
 public class UserEndPoints {
 
-      public static Response createUser(User user)
+      public static Response createUser(List<User> user)
        {
         Response response = given()
                    .contentType(ContentType.JSON)
@@ -24,9 +26,10 @@ public class UserEndPoints {
     {
         Response response =
                 given()
-                     .pathParam("username",userName)
+                      .pathParam("username",userName)
+                      .accept(ContentType.JSON)
                 .when()
-                     .post(Routes.get_url);
+                      .get(Routes.get_url);
         return response ;
     }
 
