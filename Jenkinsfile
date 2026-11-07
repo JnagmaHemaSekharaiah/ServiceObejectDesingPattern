@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/username/PetStore_API_Automation.git'
+                    url: 'https://github.com/JnagmaHemaSekharaiah/ServiceObejectDesingPattern.git'
             }
         }
 
