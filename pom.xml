@@ -17,24 +17,23 @@
     </properties>
 
 
+
     <build>
-
-     <pluginManagement>
-
         <plugins>
 
+            <!-- Maven Surefire Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
                 <configuration>
                     <suiteXmlFiles>
-                       <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
 
-
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -42,10 +41,8 @@
             </plugin>
 
         </plugins>
-
-     </pluginManagement>
-
     </build>
+
 
 
 
